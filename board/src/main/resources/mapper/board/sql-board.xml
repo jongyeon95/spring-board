@@ -43,7 +43,7 @@
 				title,
 				contents,
 				hit_cnt,
-				DATE_FORMAT(created_datetime, '%Y.%m.%d %H:%i:%s') AS created_datetime,
+				created_datetime,
 				creator_id
 			FROM
 				t_board
