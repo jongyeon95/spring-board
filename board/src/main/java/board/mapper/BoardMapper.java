@@ -10,4 +10,6 @@ import board.dto.BoardDto;
 public interface BoardMapper {
 	List<BoardDto> selectBoardList() throws Exception;
 	void insertBoard(BoardDto board) throws Exception;
+	BoardDto selectBoardDetail(int boardIdx) throws Exception;
+	void updateHitCount(int boardIdx) throws Exception;
 }
