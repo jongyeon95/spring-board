@@ -100,6 +100,22 @@
  			]]>
  	</select>
  	
+ 	<select id="selectBoardFileInformation" parameterType="map" resultType="board.dto.BoardFileDto">
+ 		<![CDATA[
+ 			SELECT
+ 				original_file_name,
+ 				stored_file_path,
+ 				file_size
+ 			FROM
+ 				t_file
+ 			WHERE
+ 				idx=#{idx}
+ 				AND board_idx = #{boardIdx}
+ 				AND deleted_yn ='N'
+ 			
+ 		]]>
+ 	</select>
+ 	
  	<update id="updateBoard" parameterType="board.dto.BoardDto">
 		<![CDATA[
 			UPDATE t_board SET 
